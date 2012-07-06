@@ -1,0 +1,4 @@
+<h1><%= @link.title %></h1>
+
+<p>URL: <%= @link.url %></p>
+<%= link_to "<< Back", links_path %> | <%= link_to "Edit", edit_link_path(@link) %> | <%= link_to "Delete", link_path(@link), :method => :delete, :confirm => "Really delete the link?" %>

@@ -1,9 +1,10 @@
 <h1>All Links</h1>
 
+<%= link_to "Add A Link", new_link_path %>
 <ul class="links">
 	<% @links.each do |links| %>
 		<li>
-			<%= link_to links.title, links.url, :target => 'blank' =%>
+			<%= link_to links.title, link_path(links) %>
 		</li>
 	<% end %>
 </ul>

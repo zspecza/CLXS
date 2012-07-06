@@ -7,6 +7,10 @@ class LinksController < ApplicationController
   	@links = Link.all
   end
 
+  def show
+  	@link = Link.find(params[:id])
+  end
+
   def create
   	@link = Link.new(params[:link])
   	if @link.save
@@ -18,5 +22,18 @@ class LinksController < ApplicationController
 
   def edit
   	@link = Link.find(params[:id])
+  end
+
+  def update
+  	@link = Link.find(params[:id])
+  	@link.update_attributes(params[:link])
+
+  	redirect_to link_path, :notice => "Link has been updated!"
+  end
+
+  def destroy
+  	@link = Link.find(params[:id])
+  	@link.destroy
+  	redirect_to links_path, :notice => "Link Deleted."
   end
 end
