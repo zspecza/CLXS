@@ -1,3 +1,23 @@
 // Place all the styles related to the links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.links {
+	list-style: none;
+}
+ul.links li {
+	display: block;
+	padding: 10px;
+	margin-bottom: 5px;
+	border: 2px solid #3C7025;
+	background: #AFE6AE;
+	border-radius: 5px;
+	box-shadow: inset #ffffff 1px 1px 0px;
+}
+ul.links li a {
+	text-decoration: none;
+	color: #3C7025;
+	text-shadow: #ffffff 1px 1px 0px;
+	font-family: Tahoma;
+	font-size: 1em; 
+}

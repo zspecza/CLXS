@@ -3,6 +3,10 @@ class LinksController < ApplicationController
   	@link = Link.new
   end
 
+  def index
+  	@links = Link.all
+  end
+
   def create
   	@link = Link.new(params[:link])
   	if @link.save
@@ -12,7 +16,7 @@ class LinksController < ApplicationController
   	end
   end
 
-  def index
-  	@links = Link.all
+  def edit
+  	@link = Link.find(params[:id])
   end
 end

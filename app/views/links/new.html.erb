@@ -1,27 +1,3 @@
 <h1>Add a Link</h1>
 
-<%= form_for @link do |f| %>
-	<% if @link.errors.any? %>
-		<div class="error_messages">
-			<h2>Form is invalid</h2>
-			<ul>
-				<% for message in @link.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<p>
-		<%= f.label :url %><br />
-		<%= f.text_field :url %>
-	</p>
-	<p>
-		<%= f.label :keyword %><br />
-		<%= f.text_field :keyword %>
-	</p>
-	<p>
-		<%= f.label :title %><br />
-		<%= f.text_field :title %>
-	</p>
-	<p class="button"><%= f.submit %></p>
-<% end %>
+<%= render :partial => 'form' %>

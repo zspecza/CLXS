@@ -1,9 +1,9 @@
 <h1>All Links</h1>
 
-<ul>
+<ul class="links">
 	<% @links.each do |links| %>
 		<li>
-			<%= links.title %>
+			<%= link_to links.title, links.url, :target => 'blank' =%>
 		</li>
 	<% end %>
 </ul>
